@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #c6be94;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: url(https://images.unsplash.com/photo-1490604001847-b712b0c2f967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzIyMzh8MHwxfHNlYXJjaHwxOHx8bGFuZHNjYXBlfGVufDB8fHx8MTY2NTg4MjM2MA&ixlib=rb-1.2.1&q=80&w=1080) bottom no-repeat;
+    background-size: cover;
+}
+h1{
+    color: #c6be94;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.news {
+    background-color: #fff;
+    padding: 50px 0 32px;
+}
+article:nth-child(even){  /*выбрать четные элементы */
+    background: rgb(150, 242, 150);
+}
+
+  article:nth-child(-n+2) h2::before{ /*выбрать две первые новости */
+    content: "New ";
+    font-style: italic;
+    color: red;
+    font-size: xx-large;
+    animation: anim 1s ease 0s infinite normal forwards;
+    }
+@keyframes anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+article {
+    width: 768px;
+    margin: 0 auto 32px;
+    padding: 6px 15px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+article a {
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+}
+article p {
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+article a:hover {
+    color: #0085a1;
+
+}
+.name-text{
+    font-style: italic;
+}
+article h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+    
+}
+
+.article-meta {
+    color: rgb(134, 142, 150);
+    margin-bottom: 5px;
+}
+article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+footer .links {
+    margin-bottom: 50px;
+}
+
+footer .links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.copyright {
+    color: rgb(108, 117, 125);
+    font-family: 'Times New Roman', Times, serif;
+}
